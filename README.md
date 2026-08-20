@@ -149,6 +149,8 @@ SENSENOVA_API_KEY=你的日日新API Key
 APIFY_API_TOKEN=你的Apify Token（可选，仅自动采集模式需要）
 ```
 
+> **API兼容说明**：本项目使用OpenAI SDK兼容格式调用大模型，支持任意OpenAI兼容API。如无日日新API，可替换为DeepSeek官方API、OpenAI API等，只需修改 `src/config.py` 中的 `SENSENOVA_BASE_URL` 和 `LLM_MODEL` 即可，无需改动业务代码。
+
 ### 启动应用
 ```bash
 streamlit run app.py
